@@ -47,6 +47,10 @@ int main()
                printf("Congrats! You guessed the right number!\n");
                break;
             }
+            if (strcmp(userGuess, "q") == 0)
+            {
+               break;
+            }
             // compare: if guess is less than random number in ascii
             else if (strcmp(userGuess, numAsString) < 0)
             {
