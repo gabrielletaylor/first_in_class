@@ -78,8 +78,12 @@ int main()
             // validate that user value is within boundaries
             if (newMax > 0 && newMax <= maxValue)
             {
+               FILE *fp;
                maxValue = newMax;
                printf("Max value set to %d\n", maxValue);
+               fp = fopen("listMaxValues.txt", "a+");
+               fprintf(fp, "%d\n", maxValue);
+               fclose(fp);
                break;
             }
             else if (newMax <= 0)
